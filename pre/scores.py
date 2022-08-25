@@ -49,16 +49,16 @@ class Cal_params_epoch(object):
         return y_true, y_pred
 
     def _POD_(self, n1, n3):
-        return torch.true_divide(n1, n1 + n3 + self.eps)
+        return torch.div(n1, n1 + n3 + self.eps)
 
     def _FAR_(self, n1, n2):
-        return torch.true_divide(n2, n1 + n2 + self.eps)
+        return torch.div(n2, n1 + n2 + self.eps)
 
     def _TS_(self, n1, n2, n3):
-        return torch.true_divide(n1, n1 + n2 + n3 + self.eps)
+        return torch.div(n1, n1 + n2 + n3 + self.eps)
 
     def _ETS_(self, n1, n2, n3, r):
-        return torch.true_divide(n1 - r, n1 + n2 + n3 - r + self.eps)
+        return torch.div(n1 - r, n1 + n2 + n3 - r + self.eps)
 
     def cal_batch(self, y_true, y_pred):
         y_true, y_pred = self._transform(y_true, y_pred)
@@ -66,7 +66,7 @@ class Cal_params_epoch(object):
         n2 = torch.sum((y_pred > 0) & (y_true < 1))
         n3 = torch.sum((y_pred < 1) & (y_true > 0))
         n4 = torch.sum((y_pred < 1) & (y_true < 1))
-        r = torch.true_divide((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4)
+        r = torch.div((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4)
         pod = self._POD_(n1, n3)
         far = self._FAR_(n1, n2)
         ts = self._TS_(n1, n2, n3)
@@ -83,7 +83,7 @@ class Cal_params_epoch(object):
         n2 = torch.sum((y_pred > 0) & (y_true < 1))
         n3 = torch.sum((y_pred < 1) & (y_true > 0))
         n4 = torch.sum((y_pred < 1) & (y_true < 1))
-        r = torch.true_divide((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4)
+        r = torch.div((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4)
         pod = self._POD_(n1, n3)
         far = self._FAR_(n1, n2)
         ts = self._TS_(n1, n2, n3)
@@ -95,7 +95,7 @@ class Cal_params_epoch(object):
         return pod, far, ts, ets
 
     def cal_epoch(self):
-        r = torch.true_divide((self.n1 + self.n2) * (self.n1 + self.n3), self.n1 + self.n2 + self.n3 + self.n4)
+        r = torch.div((self.n1 + self.n2) * (self.n1 + self.n3), self.n1 + self.n2 + self.n3 + self.n4)
         pod = self._POD_(self.n1, self.n3)
         far = self._FAR_(self.n1, self.n2)
         ts = self._TS_(self.n1, self.n2, self.n3)
@@ -103,7 +103,7 @@ class Cal_params_epoch(object):
         return pod, far, ts, ets
 
     def cal_epoch_sum(self):
-        r = torch.true_divide((self.n1sum + self.n2sum) * (self.n1sum + self.n3sum), self.n1sum + self.n2sum + self.n3sum + self.n4sum)
+        r = torch.div((self.n1sum + self.n2sum) * (self.n1sum + self.n3sum), self.n1sum + self.n2sum + self.n3sum + self.n4sum)
         pod = self._POD_(self.n1sum, self.n3sum)
         far = self._FAR_(self.n1sum, self.n2sum)
         ts = self._TS_(self.n1sum, self.n2sum, self.n3sum)

@@ -1,0 +1,247 @@
+
+加载数据完毕， val236测试集,阈值=0.5,file=/data/wenjiahua/light_data/ADSNet_testdata/gyRecod/moe/MOE_model_maxPOD.pkl
+-------------输出逐小时累加-------------------
+true frames=3 forecast frames=12,在0小时到1小时内的指标
+strict tensor(16547) tensor(97714) tensor(6475) tensor(5845580)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在1小时到2小时内的指标
+strict tensor(26087) tensor(183177) tensor(13169) tensor(5743883)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在2小时到3小时内的指标
+strict tensor(32908) tensor(204206) tensor(21331) tensor(5707871)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在3小时到4小时内的指标
+strict tensor(38706) tensor(221376) tensor(30331) tensor(5675903)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在4小时到5小时内的指标
+strict tensor(43844) tensor(230279) tensor(41034) tensor(5651159)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在5小时到6小时内的指标
+strict tensor(48319) tensor(235632) tensor(53629) tensor(5628736)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在6小时到7小时内的指标
+strict tensor(52677) tensor(240569) tensor(65510) tensor(5607560)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在7小时到8小时内的指标
+strict tensor(55640) tensor(245500) tensor(77418) tensor(5587758)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在8小时到9小时内的指标
+strict tensor(57946) tensor(249631) tensor(89239) tensor(5569500)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在9小时到10小时内的指标
+strict tensor(59876) tensor(251636) tensor(101340) tensor(5553464)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在10小时到11小时内的指标
+strict tensor(61684) tensor(252013) tensor(114533) tensor(5538086)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+true frames=3 forecast frames=12,在11小时到12小时内的指标
+strict tensor(63222) tensor(251930) tensor(129164) tensor(5522000)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+TEST EPOCH INFO: 
+Point-> POD: 0.32862  FAR: 0.79939  TS: 0.14229  ETS: 0.12221 FOM: 0.67138 BIAS: 1.63812 HSS: 0.21781 PC: 0.93613
+Neighbor-> POD: 0.49371  FAR: 0.55039  TS: 0.30772  ETS: 0.30141 FOM: 0.50629 BIAS: 1.09809 HSS: 0.46321 PC: 0.98534
+
+ 0.71875 0.66454 0.60672 0.56066 0.51655 0.47396 0.44571 0.41816 0.39369 0.37140 0.35005 0.32862
+ 0.85518 0.87534 0.86121 0.85118 0.84006 0.82983 0.82037 0.81524 0.81160 0.80779 0.80336 0.79939
+ 0.13705 0.11728 0.12733 0.13328 0.13912 0.14313 0.14683 0.14698 0.14603 0.14503 0.14404 0.14229
+ 0.13389 0.11178 0.11999 0.12420 0.12833 0.13064 0.13279 0.13157 0.12938 0.12724 0.12512 0.12221
+------------neighbor-----------------
+ 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371 0.49371
+ 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039 0.55039
+ 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772 0.30772
+ 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141 0.30141
+-------------输出逐小时单独-------------------
+TEST INFO: (1/236) 
+{'POD': tensor(0.7478), 'FAR': tensor(0.8652), 'TS': tensor(0.1289), 'ETS': tensor(0.1014), 'FOM': tensor(0.2522), 'BIAS': tensor(5.5488), 'HSS': tensor(0.1841), 'PC': tensor(0.8383)}
+{'POD': tensor(0.5577), 'FAR': tensor(0.5128), 'TS': tensor(0.3514), 'ETS': tensor(0.2936), 'FOM': tensor(0.4423), 'BIAS': tensor(1.1446), 'HSS': tensor(0.4539), 'PC': tensor(0.8832)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.0337), 'FAR': tensor(0.8571), 'TS': tensor(0.0280), 'ETS': tensor(0.0274), 'FOM': tensor(0.9663), 'BIAS': tensor(0.2360), 'HSS': tensor(0.0533), 'PC': tensor(0.9959)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9852)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(4.3000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9983)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.4000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9994)}
+
+true frames=3 forecast frames=12,在0小时到1小时内的指标
+strict tensor(16547) tensor(97714) tensor(6475) tensor(5845580)
+neighbor tensor(38885) tensor(47602) tensor(39876) tensor(5839953)
+TEST INFO: (1/236) 
+{'POD': tensor(0.2105), 'FAR': tensor(0.9858), 'TS': tensor(0.0135), 'ETS': tensor(0.0114), 'FOM': tensor(0.7895), 'BIAS': tensor(14.8246), 'HSS': tensor(0.0225), 'PC': tensor(0.9653)}
+{'POD': tensor(0.1149), 'FAR': tensor(0.9466), 'TS': tensor(0.0378), 'ETS': tensor(0.0314), 'FOM': tensor(0.8851), 'BIAS': tensor(2.1532), 'HSS': tensor(0.0610), 'PC': tensor(0.9728)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(9.8000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9961)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(4.7000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9981)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.6154), 'FAR': tensor(0.8661), 'TS': tensor(0.1236), 'ETS': tensor(0.1152), 'FOM': tensor(0.3846), 'BIAS': tensor(4.5962), 'HSS': tensor(0.2065), 'PC': tensor(0.9551)}
+{'POD': tensor(0.5015), 'FAR': tensor(0.6460), 'TS': tensor(0.2618), 'ETS': tensor(0.2470), 'FOM': tensor(0.4985), 'BIAS': tensor(1.4167), 'HSS': tensor(0.3962), 'PC': tensor(0.9624)}
+
+true frames=3 forecast frames=12,在1小时到2小时内的指标
+strict tensor(10650) tensor(145736) tensor(10430) tensor(5799500)
+neighbor tensor(23035) tensor(71059) tensor(50618) tensor(5821604)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0017), 'FOM': tensor(1.), 'BIAS': tensor(1.0602), 'HSS': tensor(-0.0034), 'PC': tensor(0.9932)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0011), 'FOM': tensor(1.), 'BIAS': tensor(0.0703), 'HSS': tensor(-0.0023), 'PC': tensor(0.9813)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.0000)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9996)}
+
+true frames=3 forecast frames=12,在2小时到3小时内的指标
+strict tensor(6531) tensor(80883) tensor(13487) tensor(5865415)
+neighbor tensor(12422) tensor(40501) tensor(59077) tensor(5854316)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9998)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9986)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9999)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9995)}
+
+true frames=3 forecast frames=12,在3小时到4小时内的指标
+strict tensor(3545) tensor(71084) tensor(16154) tensor(5875533)
+neighbor tensor(6672) tensor(37234) tensor(62883) tensor(5859527)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(6.4300e+12), 'HSS': tensor(0.), 'PC': tensor(0.9746)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(4.2600e+12), 'HSS': tensor(0.), 'PC': tensor(0.9831)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(8.9000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9965)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(3.9000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9985)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9911)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9644)}
+
+true frames=3 forecast frames=12,在4小时到5小时内的指标
+strict tensor(3120) tensor(54723) tensor(18081) tensor(5890392)
+neighbor tensor(5436) tensor(27295) tensor(68634) tensor(5864951)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(2.0000e+10), 'HSS': tensor(0.), 'PC': tensor(0.9999)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(2.7000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9989)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(8.0000e+10), 'HSS': tensor(0.), 'PC': tensor(0.9997)}
+
+true frames=3 forecast frames=12,在5小时到6小时内的指标
+strict tensor(2923) tensor(45483) tensor(20310) tensor(5897600)
+neighbor tensor(4865) tensor(21421) tensor(74458) tensor(5865572)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(4.0000e+10), 'HSS': tensor(0.), 'PC': tensor(0.9998)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(1.)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9915)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9601)}
+
+true frames=3 forecast frames=12,在6小时到7小时内的指标
+strict tensor(2644) tensor(40301) tensor(20671) tensor(5902700)
+neighbor tensor(4026) tensor(17318) tensor(76077) tensor(5868895)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9934)}
+{'POD': tensor(0.), 'FAR': tensor(0.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(1.), 'BIAS': tensor(0.), 'HSS': tensor(0.), 'PC': tensor(0.9747)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0023), 'FOM': tensor(1.), 'BIAS': tensor(0.5732), 'HSS': tensor(-0.0045), 'PC': tensor(0.9902)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0010), 'FOM': tensor(1.), 'BIAS': tensor(0.0579), 'HSS': tensor(-0.0019), 'PC': tensor(0.9812)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.0065), 'FAR': tensor(0.9981), 'TS': tensor(0.0015), 'ETS': tensor(-0.0032), 'FOM': tensor(0.9935), 'BIAS': tensor(3.3290), 'HSS': tensor(-0.0065), 'PC': tensor(0.9735)}
+{'POD': tensor(0.0092), 'FAR': tensor(0.9729), 'TS': tensor(0.0069), 'ETS': tensor(-0.0019), 'FOM': tensor(0.9908), 'BIAS': tensor(0.3387), 'HSS': tensor(-0.0038), 'PC': tensor(0.9545)}
+
+true frames=3 forecast frames=12,在7小时到8小时内的指标
+strict tensor(2188) tensor(35715) tensor(19190) tensor(5909223)
+neighbor tensor(3268) tensor(13957) tensor(71449) tensor(5877642)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.6000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9994)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(7.0000e+10), 'HSS': tensor(0.), 'PC': tensor(0.9997)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0006), 'FOM': tensor(1.), 'BIAS': tensor(0.4151), 'HSS': tensor(-0.0012), 'PC': tensor(0.9970)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0002), 'FOM': tensor(1.), 'BIAS': tensor(0.0143), 'HSS': tensor(-0.0003), 'PC': tensor(0.9888)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.0149), 'FAR': tensor(0.9659), 'TS': tensor(0.0105), 'ETS': tensor(0.0048), 'FOM': tensor(0.9851), 'BIAS': tensor(0.4362), 'HSS': tensor(0.0096), 'PC': tensor(0.9739)}
+{'POD': tensor(0.0069), 'FAR': tensor(0.8514), 'TS': tensor(0.0067), 'ETS': tensor(0.0038), 'FOM': tensor(0.9931), 'BIAS': tensor(0.0465), 'HSS': tensor(0.0077), 'PC': tensor(0.9351)}
+
+true frames=3 forecast frames=12,在8小时到9小时内的指标
+strict tensor(1790) tensor(32179) tensor(18315) tensor(5914032)
+neighbor tensor(2876) tensor(11993) tensor(69030) tensor(5882417)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0007), 'FOM': tensor(1.), 'BIAS': tensor(0.2527), 'HSS': tensor(-0.0015), 'PC': tensor(0.9955)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0004), 'FOM': tensor(1.), 'BIAS': tensor(0.0356), 'HSS': tensor(-0.0008), 'PC': tensor(0.9885)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-3.8458e-05), 'FOM': tensor(1.), 'BIAS': tensor(35.), 'HSS': tensor(-7.6919e-05), 'PC': tensor(0.9986)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0002), 'FOM': tensor(1.), 'BIAS': tensor(1.6667), 'HSS': tensor(-0.0004), 'PC': tensor(0.9991)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0010), 'FOM': tensor(1.), 'BIAS': tensor(0.5135), 'HSS': tensor(-0.0020), 'PC': tensor(0.9956)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0008), 'FOM': tensor(1.), 'BIAS': tensor(0.0642), 'HSS': tensor(-0.0016), 'PC': tensor(0.9862)}
+
+true frames=3 forecast frames=12,在9小时到10小时内的指标
+strict tensor(1459) tensor(26324) tensor(18212) tensor(5920321)
+neighbor tensor(1865) tensor(10142) tensor(67601) tensor(5886708)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0008), 'FOM': tensor(1.), 'BIAS': tensor(0.0840), 'HSS': tensor(-0.0016), 'PC': tensor(0.9888)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0004), 'FOM': tensor(1.), 'BIAS': tensor(0.0084), 'HSS': tensor(-0.0008), 'PC': tensor(0.9523)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(2.7000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9989)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.2000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9995)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(3.5000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9986)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.4000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9994)}
+
+true frames=3 forecast frames=12,在10小时到11小时内的指标
+strict tensor(1084) tensor(21344) tensor(20049) tensor(5923839)
+neighbor tensor(1271) tensor(8357) tensor(72541) tensor(5884147)
+TEST INFO: (1/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.8000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9993)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(0.), 'FOM': tensor(0.), 'BIAS': tensor(1.0000e+11), 'HSS': tensor(0.), 'PC': tensor(0.9996)}
+
+TEST INFO: (101/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0007), 'FOM': tensor(1.), 'BIAS': tensor(0.1774), 'HSS': tensor(-0.0015), 'PC': tensor(0.9942)}
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0003), 'FOM': tensor(1.), 'BIAS': tensor(0.0269), 'HSS': tensor(-0.0007), 'PC': tensor(0.9864)}
+
+TEST INFO: (201/236) 
+{'POD': tensor(0.), 'FAR': tensor(1.), 'TS': tensor(0.), 'ETS': tensor(-0.0008), 'FOM': tensor(1.), 'BIAS': tensor(27.2857), 'HSS': tensor(-0.0016), 'PC': tensor(0.9765)}
+{'POD': tensor(0.0078), 'FAR': tensor(0.9969), 'TS': tensor(0.0022), 'ETS': tensor(-0.0014), 'FOM': tensor(0.9922), 'BIAS': tensor(2.4651), 'HSS': tensor(-0.0028), 'PC': tensor(0.9824)}
+
+true frames=3 forecast frames=12,在11小时到12小时内的指标
+strict tensor(784) tensor(16619) tensor(22351) tensor(5926562)
+neighbor tensor(907) tensor(6444) tensor(77981) tensor(5880984)
+end----------1--------------------
+TEST EPOCH INFO: 
+Point-> POD: 0.03389  FAR: 0.95495  TS: 0.01972  ETS: 0.01805 FOM: 0.96611 BIAS: 0.75224 HSS: 0.03547 PC: 0.99347
+Neighbor-> POD: 0.01150  FAR: 0.87662  TS: 0.01063  ETS: 0.00950 FOM: 0.98850 BIAS: 0.09318 HSS: 0.01882 PC: 0.98585
+
+ 0.71875 0.50522 0.32626 0.17996 0.14716 0.12581 0.11340 0.10235 0.08903 0.07417 0.05129 0.03389
+ 0.85518 0.93190 0.92529 0.95250 0.94606 0.93961 0.93843 0.94227 0.94730 0.94749 0.95167 0.95495
+ 0.13705 0.06384 0.06473 0.03905 0.04109 0.04254 0.04156 0.03832 0.03424 0.03172 0.02552 0.01972
+ 0.13389 0.06073 0.06200 0.03643 0.03849 0.03990 0.03903 0.03603 0.03212 0.02979 0.02369 0.01805
+------------neighbor-----------------
+ 0.49371 0.31275 0.17374 0.09592 0.07339 0.06133 0.05026 0.04374 0.04000 0.02685 0.01722 0.01150
+ 0.55039 0.75519 0.76528 0.84804 0.83392 0.81492 0.81138 0.81028 0.80658 0.84467 0.86799 0.87662
+ 0.30772 0.15918 0.11091 0.06248 0.05363 0.04829 0.04133 0.03685 0.03428 0.02343 0.01547 0.01063
+ 0.30141 0.15237 0.10585 0.05796 0.04982 0.04498 0.03850 0.03451 0.03221 0.02171 0.01404 0.00950

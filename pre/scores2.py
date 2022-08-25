@@ -17,16 +17,32 @@ class Cal_params_epoch(object):
         self.eps = 1e-10
         self.threshold = threshold
 
+        # 带阈值的
+    # def _transform_sum(self, y_true, y_pred):
+    #     # y_true = y_true.permute(1, 0, 2, 3, 4).cpu().contiguous()
+    #     y_true = y_true.permute(1, 0, 2, 3).cpu().contiguous()
+    #     y_pred = y_pred.permute(1, 0, 2, 3, 4).cpu().contiguous()
+    #     # y_pred = torch.sigmoid(y_pred)
+    #     if 0 <= self.threshold <= 1:
+    #         y_pred[y_pred > self.threshold] = 1
+    #         y_pred[y_pred < 1] = 0
+    #     else:
+    #         y_pred = torch.round(y_pred)
+    #     frames = y_true.shape[0]
+    #     sum_true = torch.zeros(y_true[0].shape)
+    #     sum_pred = torch.zeros(y_pred[0].shape)
+    #     for i in range(frames):
+    #         sum_true += y_true[i]
+    #         sum_pred += y_pred[i]
+    #     sum_true = torch.flatten(sum_true)
+    #     sum_pred = torch.flatten(sum_pred)
+    #     return sum_true, sum_pred
+
     def _transform_sum(self, y_true, y_pred):
         # y_true = y_true.permute(1, 0, 2, 3, 4).cpu().contiguous()
         y_true = y_true.permute(1, 0, 2, 3).cpu().contiguous()
         y_pred = y_pred.permute(1, 0, 2, 3, 4).cpu().contiguous()
-        # y_pred = torch.sigmoid(y_pred)
-        if 0 <= self.threshold <= 1:
-            y_pred[y_pred > self.threshold] = 1
-            y_pred[y_pred < 1] = 0
-        else:
-            y_pred = torch.round(y_pred)
+        y_pred = torch.round(torch.sigmoid(y_pred))
         frames = y_true.shape[0]
         sum_true = torch.zeros(y_true[0].shape)
         sum_pred = torch.zeros(y_pred[0].shape)
@@ -36,6 +52,9 @@ class Cal_params_epoch(object):
         sum_true = torch.flatten(sum_true)
         sum_pred = torch.flatten(sum_pred)
         return sum_true, sum_pred
+
+
+
 
     def _transform_sum_neighbor(self, y_true, y_pred):
         y_true = y_true.permute(1, 0, 2, 3).cpu().contiguous()
@@ -68,29 +87,30 @@ class Cal_params_epoch(object):
         return sum_true, sum_pred
 
     def _POD_(self, n1, n3):
-        return torch.true_divide(n1, n1 + n3 + self.eps)
+
+        return torch.div(n1, n1 + n3 + self.eps)
 
     def _FAR_(self, n1, n2):
-        return torch.true_divide(n2, n1 + n2 + self.eps)
+        return torch.div(n2, n1 + n2 + self.eps)
 
     def _TS_(self, n1, n2, n3):
-        return torch.true_divide(n1, n1 + n2 + n3 + self.eps)
+        return torch.div(n1, n1 + n2 + n3 + self.eps)
 
     def _ETS_(self, n1, n2, n3, n4):
-        r = torch.true_divide((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4 + self.eps)
-        return torch.true_divide(n1 - r, n1 + n2 + n3 - r + self.eps)
+        r = torch.div((n1 + n2) * (n1 + n3), n1 + n2 + n3 + n4 + self.eps)
+        return torch.div(n1 - r, n1 + n2 + n3 - r + self.eps)
 
     def _FOM_(self, n1, n3):
-        return torch.true_divide(n3, n1 + n3 + self.eps)
+        return torch.div(n3, n1 + n3 + self.eps)
 
     def _BIAS_(self, n1, n2, n3):
-        return torch.true_divide(n1 + n2, n1 + n3 + self.eps)
+        return torch.div(n1 + n2, n1 + n3 + self.eps)
 
     def _HSS_(self, n1, n2, n3, n4):
-        return torch.true_divide(2 * (n1 * n4 - n2 * n3), (n1 + n3) * (n3 + n4) + (n1 + n2) * (n2 + n4) + self.eps)
+        return torch.div(2 * (n1 * n4 - n2 * n3), (n1 + n3) * (n3 + n4) + (n1 + n2) * (n2 + n4) + self.eps)
 
     def _PC_(self, n1, n2, n3, n4):
-        return torch.true_divide(n1 + n4, n1 + n2 + n3 + n4 + self.eps)
+        return torch.div(n1 + n4, n1 + n2 + n3 + n4 + self.eps)
 
     def _all_eval(self, n1, n2, n3, n4):
         pod = self._POD_(n1, n3)
@@ -128,9 +148,12 @@ class Cal_params_epoch(object):
         return self._all_eval(n1, n2, n3, n4)
 
     def cal_epoch_sum(self):
+
+        print('strict', self.n1sum, self.n2sum, self.n3sum, self.n4sum)
         return self._all_eval(self.n1sum, self.n2sum, self.n3sum, self.n4sum)
 
     def cal_epoch_neighbor(self):
+        print('neighbor',self.n1sum_neighbor, self.n2sum_neighbor, self.n3sum_neighbor, self.n4sum_neighbor)
         return self._all_eval(self.n1sum_neighbor, self.n2sum_neighbor, self.n3sum_neighbor, self.n4sum_neighbor)
 
 if __name__ == "__main__":

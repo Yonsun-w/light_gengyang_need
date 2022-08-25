@@ -1,0 +1,63 @@
+pre,name=MOE
+加载数据完毕， val236测试集,阈值=0.5,file=/data/wenjiahua/light_data/ADSNet_testdata/gyRecod/moe/MOE_model_maxETS.pkl
+-------------输出逐小时累加-------------------
+true frames=3 forecast frames=12,在0小时到1小时内的指标
+strict tensor(16057) tensor(81844) tensor(6965) tensor(5861450)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在1小时到2小时内的指标
+strict tensor(25379) tensor(108973) tensor(13877) tensor(5818087)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在2小时到3小时内的指标
+strict tensor(32141) tensor(130982) tensor(22098) tensor(5781095)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在3小时到4小时内的指标
+strict tensor(37976) tensor(143735) tensor(31061) tensor(5753544)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在4小时到5小时内的指标
+strict tensor(44138) tensor(152174) tensor(40740) tensor(5729264)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在5小时到6小时内的指标
+strict tensor(49986) tensor(161109) tensor(51962) tensor(5703259)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在6小时到7小时内的指标
+strict tensor(55333) tensor(171350) tensor(62854) tensor(5676779)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在7小时到8小时内的指标
+strict tensor(59833) tensor(179766) tensor(73225) tensor(5653492)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在8小时到9小时内的指标
+strict tensor(63549) tensor(185542) tensor(83636) tensor(5633589)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在9小时到10小时内的指标
+strict tensor(67051) tensor(187982) tensor(94165) tensor(5617118)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在10小时到11小时内的指标
+strict tensor(70096) tensor(189809) tensor(106121) tensor(5600290)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+true frames=3 forecast frames=12,在11小时到12小时内的指标
+strict tensor(72813) tensor(190676) tensor(119573) tensor(5583254)
+neighbor tensor(34523) tensor(32433) tensor(44238) tensor(5855122)
+TEST EPOCH INFO: 
+Point-> POD: 0.37847  FAR: 0.72366  TS: 0.19008  ETS: 0.17171 FOM: 0.62153 BIAS: 1.36959 HSS: 0.29309 PC: 0.94800
+Neighbor-> POD: 0.43833  FAR: 0.48439  TS: 0.31048  ETS: 0.30495 FOM: 0.56167 BIAS: 0.85012 HSS: 0.46737 PC: 0.98715
+
+ 0.69746 0.64650 0.59258 0.55008 0.52002 0.49031 0.46818 0.44968 0.43176 0.41591 0.39778 0.37847
+ 0.83599 0.81110 0.80296 0.79101 0.77516 0.76321 0.75590 0.75028 0.74488 0.73709 0.73030 0.72366
+ 0.15312 0.17121 0.17353 0.17848 0.18620 0.19002 0.19111 0.19127 0.19099 0.19201 0.19151 0.19008
+ 0.15006 0.16624 0.16686 0.17028 0.17649 0.17876 0.17837 0.17721 0.17577 0.17575 0.17419 0.17171
+------------neighbor-----------------
+ 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833 0.43833
+ 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439 0.48439
+ 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048 0.31048
+ 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495 0.30495
+-------------输出逐小时单独-------------------
+
+ 0.69746 0.49877 0.34244 0.24093 0.21320 0.17837 0.14214 0.13448 0.11559 0.09547 0.05565 0.02122
+ 0.83599 0.88519 0.91983 0.93572 0.92828 0.92385 0.93427 0.93720 0.93952 0.93661 0.94666 0.96969
+ 0.15312 0.10293 0.06947 0.05346 0.05671 0.05637 0.04706 0.04473 0.04135 0.03961 0.02800 0.01264
+ 0.15006 0.10008 0.06676 0.05085 0.05405 0.05364 0.04439 0.04228 0.03913 0.03762 0.02619 0.01104
+------------neighbor-----------------
+ 0.43833 0.27062 0.17462 0.11438 0.08090 0.05847 0.04389 0.04173 0.03723 0.02485 0.01078 0.00464
+ 0.48439 0.61202 0.71641 0.78837 0.79274 0.77581 0.79387 0.79789 0.79164 0.81766 0.87508 0.90151
+ 0.31048 0.18966 0.12117 0.08021 0.06178 0.04863 0.03755 0.03583 0.03262 0.02236 0.01003 0.00445
+ 0.30495 0.18474 0.11664 0.07613 0.05830 0.04588 0.03519 0.03368 0.03079 0.02096 0.00904 0.00386

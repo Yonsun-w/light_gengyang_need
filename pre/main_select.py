@@ -64,6 +64,7 @@ def selectModel(config_dict):
                                      wrf_tra_frames=config_dict['ForecastHourNum'],
                                      wrf_channels=config_dict['WRFChannelNum'], config_dict=config_dict).to(
             config_dict['Device'])
+
     else:
         print('`{}` not support'.format(config_dict['NetName']))
         assert False
@@ -89,29 +90,31 @@ def DoPredict(config_dict):
     for ts in threshold:
         calparams_epoch.append(Cal_params_epoch(ts))
 
-    for i, (X, y) in enumerate(pre_loader):
-        wrf, obs = X
-        label = y
-        wrf = wrf.to(config_dict['Device'])
-        obs = obs.to(config_dict['Device'])
-        label = label.to(config_dict['Device'])
 
-        pre_frames = model(wrf, obs)
-        pre_frames = torch.sigmoid(pre_frames)
 
-        if torch.sum(label) > 1000:
-            vis.save_diff(pre_frames, label, i)
-        # output
-        for j in range(len(threshold)):
-            # pod, far, ts, ets = calparams_epoch[j].cal_batch(label, pre_frames)
-            sumpod, sumfar, sumts, sumets = calparams_epoch[j].cal_batch_sum(label[:, :], pre_frames[:, :])
-        # info = 'TEST INFO: ({}/{}) \nPOD:{:.5f}  FAR:{:.5f}  TS:{:.5f}  ETS:{:.5f}\nsumPOD:{:.5f}  sumFAR:{:.5f}  sumTS:{:.5f}  sumETS:{:.5f}\n' \
-        #     .format(i + 1, len(pre_loader), pod, far, ts, ets, sumpod, sumfar, sumts, sumets)
-        print('TEST INFO: ({}/{})'.format(i + 1, len(pre_loader)))
-    for j, ts in enumerate(threshold):
-        sumpod, sumfar, sumts, sumets = calparams_epoch[j].cal_epoch_sum()
-        info = 'TEST EPOCH INFO (threshold={}): \nsumPOD:{:.5f}  sumFAR:{:.5f}  sumTS:{:.5f}  sumETS:{:.5f}\n'.format(ts, sumpod, sumfar, sumts, sumets)
-        print(info)
+    # for i, (X, y) in enumerate(pre_loader):
+    #     wrf, obs = X
+    #     label = y
+    #     wrf = wrf.to(config_dict['Device'])
+    #     obs = obs.to(config_dict['Device'])
+    #     label = label.to(config_dict['Device'])
+    #
+    #     pre_frames = model(wrf, obs)
+    #     pre_frames = torch.sigmoid(pre_frames)
+    #
+    #     if torch.sum(label) > 1000:
+    #         vis.save_diff(pre_frames, label, i)
+    #     # output
+    #     for j in range(len(threshold)):
+    #         # pod, far, ts, ets = calparams_epoch[j].cal_batch(label, pre_frames)
+    #         sumpod, sumfar, sumts, sumets = calparams_epoch[j].cal_batch_sum(label[:, :], pre_frames[:, :])
+    #     # info = 'TEST INFO: ({}/{}) \nPOD:{:.5f}  FAR:{:.5f}  TS:{:.5f}  ETS:{:.5f}\nsumPOD:{:.5f}  sumFAR:{:.5f}  sumTS:{:.5f}  sumETS:{:.5f}\n' \
+    #     #     .format(i + 1, len(pre_loader), pod, far, ts, ets, sumpod, sumfar, sumts, sumets)
+    #     print('TEST INFO: ({}/{})'.format(i + 1, len(pre_loader)))
+    # for j, ts in enumerate(threshold):
+    #     sumpod, sumfar, sumts, sumets = calparams_epoch[j].cal_epoch_sum()
+    #     info = 'TEST EPOCH INFO (threshold={}): \nsumPOD:{:.5f}  sumFAR:{:.5f}  sumTS:{:.5f}  sumETS:{:.5f}\n'.format(ts, sumpod, sumfar, sumts, sumets)
+    #     print(info)
 
 
 
